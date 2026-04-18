@@ -13,6 +13,29 @@ Perhaps I dream of making this a local instance of warp.dev? Do I dream?
 
 This script lets you send a question to an Ollama model running locally. It will attempt to start Ollama if it is not already running.
 
+### Web Search Mode
+
+Add `--web` to use DuckDuckGo web search results as context for your question. The script will attempt to use `ddgr` to fetch search results and summarize them with your Ollama model. If `ddgr` is unavailable or rate-limited, it will pass the DuckDuckGo search results URL to Ollama for summarization.
+
+**Requirements:**
+- [ddgr](https://github.com/jarun/ddgr) must be installed and available in your PATH for best results.
+
+**Usage:**
+
+```sh
+python3 eyeball_jar.py "Your question here" --web
+```
+
+**Example:**
+
+```sh
+python3 eyeball_jar.py "what is Rasha recovery?" --web
+```
+
+**Notes:**
+- If DuckDuckGo blocks automated queries, the script will fall back to summarizing the search results page URL.
+- Use `--debug` or `--verbose` for troubleshooting and to see detailed output.
+
 ### Basic usage
 
 ```sh
