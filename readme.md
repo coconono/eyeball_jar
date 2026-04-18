@@ -1,13 +1,15 @@
+
 # Eyeball Jar
+
+GitHub repository: <https://github.com/coconono/eyeball_jar>
 
 A simple python script to talk to an Ollama install on your machine.
 
-I gave it a more meaningful name. 
+I gave it a more meaningful name.
 
 I had an idea for a trivial task so I put copilot on it. Then I fiddled with it some more.
 
 Perhaps I dream of making this a local instance of warp.dev? Do I dream?
-
 
 ## Usage
 
@@ -18,6 +20,7 @@ This script lets you send a question to an Ollama model running locally. It will
 Add `--web` to use DuckDuckGo web search results as context for your question. The script will attempt to use `ddgr` to fetch search results and summarize them with your Ollama model. If `ddgr` is unavailable or rate-limited, it will pass the DuckDuckGo search results URL to Ollama for summarization.
 
 **Requirements:**
+
 - [ddgr](https://github.com/jarun/ddgr) must be installed and available in your PATH for best results.
 
 **Usage:**
@@ -33,6 +36,7 @@ python3 eyeball_jar.py "what is Rasha recovery?" --web
 ```
 
 **Notes:**
+
 - If DuckDuckGo blocks automated queries, the script will fall back to summarizing the search results page URL.
 - Use `--debug` or `--verbose` for troubleshooting and to see detailed output.
 
